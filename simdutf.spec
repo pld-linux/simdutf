@@ -1,4 +1,5 @@
 Summary:	Text processing at billions of characters per second
+Summary(pl.UTF-8):	Przetwarzanie tekstu z szybkością miliardów znaków na minutę
 Name:		simdutf
 Version:	8.0.0
 Release:	1
@@ -18,8 +19,14 @@ Unicode routines (UTF8, UTF16, UTF32) and Base64: billions of
 characters per second using SSE2, AVX2, NEON, AVX-512, RISC-V Vector
 Extension, LoongArch64, POWER.
 
+%description -l pl.UTF-8
+Funkcje do obsługi Unicode (UTF8, UTF16, UTF32) oraz Base64: miliardy
+znaków na sekundę przy użyciu rozszerzeń wektorowych SSE2, AVX2, NEON,
+AVX-512, RISC-V, LoongArch64, POWER.
+
 %package devel
 Summary:	Header files for simdutf library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki simdutf
 Group:		Development/Libraries
 Requires:	%{name}%{?_isa} = %{version}-%{release}
 Requires:	libstdc++-devel%{?_isa}
@@ -27,13 +34,20 @@ Requires:	libstdc++-devel%{?_isa}
 %description devel
 Header files for simdutf library.
 
+%description devel -l pl.UTF-8
+Pliki nagłówkowe biblioteki simdutf.
+
 %package tools
 Summary:	simdutf based tools for text encoding conversion
+Summary(pl.UTF-8):	Narzędzia do konwersji kodowania tekstu oparte na simdutf
 Group:		Applications/Text
 Requires:	%{name}%{?_isa} = %{version}-%{release}
 
 %description tools
 simdutf based tools for text encoding conversion.
+
+%description tools -l pl.UTF-8
+Narzędzia do konwersji kodowania tekstu oparte na simdutf.
 
 %prep
 %setup -q
