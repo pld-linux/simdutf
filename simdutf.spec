@@ -1,15 +1,15 @@
 Summary:	Text processing at billions of characters per second
 Summary(pl.UTF-8):	Przetwarzanie tekstu z szybkością miliardów znaków na minutę
 Name:		simdutf
-Version:	8.1.0
+Version:	9.1.0
 Release:	1
 License:	Apache v2.0 or MIT
 Group:		Libraries
 #Source0Download: https://github.com/simdutf/simdutf/releases
 Source0:	https://github.com/simdutf/simdutf/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	54cecdde187ee869ea992534d538fdd9
+# Source0-md5:	e55123960edadb8d9987fa30f877e588
 URL:		https://simdutf.github.io/simdutf/
-BuildRequires:	cmake >= 3.15
+BuildRequires:	cmake >= 3.18
 BuildRequires:	libstdc++-devel >= 6:8
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS CONTRIBUTING.md CONTRIBUTORS LICENSE-MIT README.md
 %{_libdir}/libsimdutf.so.*.*.*
-%ghost %{_libdir}/libsimdutf.so.32
+%ghost %{_libdir}/libsimdutf.so.35
 
 %files devel
 %defattr(644,root,root,755)
@@ -87,4 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 %files tools
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/fastbase64
+%attr(755,root,root) %{_bindir}/fastbase64.coreutils
 %attr(755,root,root) %{_bindir}/sutf
+%{_mandir}/man1/fastbase64.1*
+%{_mandir}/man1/fastbase64.coreutils.1*
+%{_mandir}/man1/sutf.1*
