@@ -53,7 +53,8 @@ Narzędzia do konwersji kodowania tekstu oparte na simdutf.
 %setup -q
 
 %build
-%cmake -B build
+%cmake -B build \
+	-DSIMDUTF_CXX_STANDARD=20
 
 %{__make} -C build
 
