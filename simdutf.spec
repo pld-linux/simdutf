@@ -1,13 +1,13 @@
 Summary:	Text processing at billions of characters per second
 Summary(pl.UTF-8):	Przetwarzanie tekstu z szybkością miliardów znaków na minutę
 Name:		simdutf
-Version:	9.3.0
+Version:	9.3.3
 Release:	1
 License:	Apache v2.0 or MIT
 Group:		Libraries
 #Source0Download: https://github.com/simdutf/simdutf/releases
 Source0:	https://github.com/simdutf/simdutf/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	97e9a977665b06cdbfa535249efbca23
+# Source0-md5:	1ceb2911b89a91ce9b970a5a34bb4131
 URL:		https://simdutf.github.io/simdutf/
 BuildRequires:	cmake >= 3.18
 BuildRequires:	libstdc++-devel >= 6:8
